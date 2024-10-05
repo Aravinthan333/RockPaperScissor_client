@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { FaHandRock, FaHandPaper, FaHandScissors } from "react-icons/fa";
-import GameHistory from "./GameHistory"; // Ensure this component exists
+import GameHistory from "./GameHistory";
 
 const App = () => {
   const [player1Name, setPlayer1Name] = useState("");
