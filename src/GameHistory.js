@@ -7,7 +7,7 @@ const GameHistory = () => {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/games");
+        const response = await axios.get("http://3.108.55.156/api/games");
         setGames(response.data);
       } catch (error) {
         console.error("Error fetching games:", error);

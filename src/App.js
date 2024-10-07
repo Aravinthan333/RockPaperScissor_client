@@ -64,7 +64,7 @@ const App = () => {
       setShowWinnerCard(true);
       setIsGameEnded(true);
 
-      await axios.post("http://localhost:5000/game", {
+      await axios.post("http://3.108.55.156/api/game", {
         player1Name,
         player2Name,
         rounds,
