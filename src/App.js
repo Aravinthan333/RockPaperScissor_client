@@ -32,7 +32,7 @@ const App = () => {
     return player2Name;
   };
 
-  const playRound = () => {
+  const playRound = async () => {
     const roundWinner = determineRoundWinner(player1Choice, player2Choice);
     const newRound = {
       round: currentRound,
@@ -41,7 +41,8 @@ const App = () => {
       winner: roundWinner,
     };
 
-    setRounds([...rounds, newRound]);
+    setRounds(rounds.concat(newRound));
+
     setPlayer1Choice(null);
     setPlayer2Choice(null);
 
@@ -64,7 +65,7 @@ const App = () => {
       setShowWinnerCard(true);
       setIsGameEnded(true);
 
-      await axios.post("http://3.108.55.156/api/game", {
+      await axios.post("http://13.235.75.88/game", {
         player1Name,
         player2Name,
         rounds,
